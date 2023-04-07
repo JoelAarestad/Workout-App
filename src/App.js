@@ -1,22 +1,16 @@
 import React from 'react'
 import ExerciseSender from './components/ExerciseSender.js'
  
-import SetNav from './components/SetNav.js'
+import ParentComponent from './components/ParentComponent.js'
 
-import Reps from './components/Reps.js'
-import Weight from './components/Weight.js'
+ 
 import './App.css'
 function App() {
   return (
     <div class = "container">
  
       <ExerciseSender />
- 
-
-      
-    
-      
-      <SetNav/>
+      <ParentComponent/>
      
     </div>
   )
