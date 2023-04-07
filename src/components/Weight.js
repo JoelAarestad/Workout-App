@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "../css/Weight.css";
 
 function Weight({weight, setWeight}) {
@@ -8,9 +8,10 @@ function Weight({weight, setWeight}) {
   };
 
   return (
-    <div>
-      <label>Weight:</label>
+    <div class = "weight">
+             <label>Weight:</label>
       <input type="number" value={weight} onChange={handleWeightChange} className="WeightInput" />
+ 
     </div>
   );
 }

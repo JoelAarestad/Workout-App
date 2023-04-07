@@ -28,9 +28,7 @@ const ParentComponent = () => {
   };
 
   const handleAttributeChange = (attribute, newValue) =>
-    setSets(setData.map((set, index) =>
-        index === selectedSet ? { ...set, [attribute]: newValue } : set
-      )
+    setSets(setData.map((set, index) => index === selectedSet ? { ...set, [attribute]: newValue } : set)
     );
 
   const { weight, reps, selectedOption } = setData[selectedSet];

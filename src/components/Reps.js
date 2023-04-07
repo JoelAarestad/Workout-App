@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "../css/Reps.css";
 function Reps({reps, setReps}) {
 
@@ -7,7 +7,7 @@ function Reps({reps, setReps}) {
   };
 
   return (
-    <div>
+    <div class = "reps">
       <label>Reps:</label>
       <input type="number" value={reps} onChange={handleRepsChange}  />
     </div>
