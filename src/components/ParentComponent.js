@@ -1,3 +1,4 @@
+//ParentComponent.js
 import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 import Weight from './Weight';
@@ -5,6 +6,8 @@ import Reps from './Reps';
 import '../css/SetNav.css';
 import SetData from './SetData';
 import NavButtons from './NavButtons';
+import SubmitButton from './SubmitButton';
+import WorkoutList from './WorkoutList';
 
 const ParentComponent = () => {
   const [selectedSet, setSelectedSet] = useState(0);
@@ -40,6 +43,8 @@ const ParentComponent = () => {
       <Dropdown selectedOption={selectedOption} onOptionChange={(newSelectedOption) => handleAttributeChange('selectedOption', newSelectedOption)} />
       <SetData sets={setData} selectedSet={selectedSet} />
       <NavButtons onMoveToSet={moveToSet} onDeleteLastSet={deleteLastSet} />
+      <SubmitButton sets={setData} />
+      <WorkoutList />
     </div>
   );
 };
