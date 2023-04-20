@@ -35,7 +35,7 @@ function ExerciseSender() {
         <label>
           Name:
           {/* This input field will update the "name" property of the form data */}
-          <input type="text" name="Exercise" onChange={handleInputChange} />
+          <input type="text" name="Exercise" onChange={handleInputChange} autocomplete="off" />
         </label>
         {/* This button will submit the form */}
         <button type="submit">Submit</button>

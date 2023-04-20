@@ -52,4 +52,12 @@ body {
     justify-content: space-between;
     margin-bottom: 16px;
   }
+  table {
+    border-collapse: collapse;
+  }
+  
+  td {
+    border: 1px solid black;
+    padding: 10px;
+  }
   

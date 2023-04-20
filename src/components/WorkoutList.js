@@ -30,6 +30,7 @@ const WorkoutList = () => {
             <th>Set</th>
             <th>Reps</th>
             <th>Weight</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -39,6 +40,8 @@ const WorkoutList = () => {
               <td>{workout.sets}</td>
               <td>{workout.reps}</td>
               <td>{workout.weight}</td>
+              <td>{workout.date_added}</td>
+              <td><button>Delete</button></td>
             </tr>
           ))}
         </tbody>
@@ -48,7 +51,7 @@ const WorkoutList = () => {
 
   return (
     <div>
-      <h2>Workout List</h2>
+      
       {workouts.length > 0 ? renderTable() : <p>No workouts found</p>}
     </div>
   );
