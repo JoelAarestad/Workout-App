@@ -1,0 +1,18 @@
+.nav-buttons-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .navigation{
+  
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    height: 50px;
+  }
+  .nav-button {
+    width: 50%;
+   
+  }
+  

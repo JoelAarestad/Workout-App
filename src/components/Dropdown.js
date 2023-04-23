@@ -35,9 +35,9 @@ function Dropdown({ selectedOption, onOptionChange }) {
   return (
     <div>
       <label>
-        Exercise:
+
         <select value={selectedOption} onChange={handleSelectChange}>
-          <option value="">Select an option</option>
+          <option value="">Select a exercise</option>
           {exercises.map((exercise, index) => (
             <option key={index} value={exercise.Exercise}>
               {exercise.Exercise}

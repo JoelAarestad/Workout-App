@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import '../css/WorkoutList.css';
 const WorkoutList = () => {
   const [workouts, setWorkouts] = useState([]);
 
@@ -40,37 +40,34 @@ const WorkoutList = () => {
 
   const renderTable = () => {
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>Exercise</th>
-            <th>Set</th>
-            <th>Reps</th>
-            <th>Weight</th>
-            <th>Action</th>
+      <table class="my-table">
+      <thead>
+        <tr>
+          <th class="my-table-header">Exercise</th>
+          <th class="my-table-header">Set</th>
+          <th class="my-table-header">Reps</th>
+          <th class="my-table-header">Weight</th>
+          <th class="my-table-header">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {workouts.map((workout, index) => (
+          <tr key={index}>
+            <td class="my-table-cell">{workout.exercise}</td>
+            <td class="my-table-cell">{workout.sets}</td>
+            <td class="my-table-cell">{workout.reps}</td>
+            <td class="my-table-cell">{workout.weight}</td>
+            <td class="my-table-cell">{workout.date_added}</td>
+            <td class="my-table-cell"><button class="my-button" onClick={() => deleteWorkout(workout.id)}>Delete</button></td>
           </tr>
-        </thead>
-        <tbody>
-          {workouts.map((workout, index) => (
-            <tr key={index}>
-              <td>{workout.id}</td>
-              <td>{workout.exercise}</td>
-              <td>{workout.sets}</td>
-              <td>{workout.reps}</td>
-              <td>{workout.weight}</td>
-              <td>{workout.date_added}</td>
-              <td><button onClick={() => deleteWorkout(workout.id)}>Delete</button></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+        ))}
+      </tbody>
+    </table>
     );
   };
 
   return (
     <div>
-      
       {workouts.length > 0 ? renderTable() : <p>No workouts found</p>}
     </div>
   );

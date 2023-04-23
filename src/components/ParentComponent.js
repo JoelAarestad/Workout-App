@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 import Weight from './Weight';
 import Reps from './Reps';
-import '../css/SetNav.css';
+ 
 import SetData from './SetData';
 import NavButtons from './NavButtons';
 import SubmitButton from './SubmitButton';
@@ -41,10 +41,12 @@ const ParentComponent = () => {
       <Weight weight={weight} setWeight={(newWeight) => handleAttributeChange('weight', newWeight)} />
       <Reps reps={reps} setReps={(newReps) => handleAttributeChange('reps', newReps)} />
       <Dropdown selectedOption={selectedOption} onOptionChange={(newSelectedOption) => handleAttributeChange('selectedOption', newSelectedOption)} />
-      <SetData sets={setData} selectedSet={selectedSet} />
-      <NavButtons onMoveToSet={moveToSet} onDeleteLastSet={deleteLastSet} />
-      <SubmitButton sets={setData} />
+ 
       <WorkoutList />
+      <SetData sets={setData} selectedSet={selectedSet} />
+      <SubmitButton sets={setData} />
+      <NavButtons onMoveToSet={moveToSet} onDeleteLastSet={deleteLastSet} />
+ 
     </div>
   );
 };

@@ -19,6 +19,7 @@ function ExerciseSender() {
       .then(res => res.text())
       // Set the response state variable to the server's response
       .then(res => setResponse(res))
+
   }
 
   // This function is called when an input field changes
@@ -33,15 +34,13 @@ function ExerciseSender() {
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Name:
-          {/* This input field will update the "name" property of the form data */}
-          <input type="text" name="Exercise" onChange={handleInputChange} autocomplete="off" />
+          <input type="text" name="Exercise" onChange={handleInputChange} autocomplete="off" placeholder="Add new exercise" />
         </label>
-        {/* This button will submit the form */}
+ 
         <button type="submit">Submit</button>
       </form>
-      {/* Display the response from the server */}
-      <p>Response from Node.js server: {response}</p>
+   
+      
     </div>
   )
 }
